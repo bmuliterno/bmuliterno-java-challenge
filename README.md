@@ -45,7 +45,7 @@ Depois de construir a imagem, execute o seguinte comando para iniciar o containe
 
 `docker run -p 8080:8080 virtualstore-app`
 
-Agora, o aplicativo estará rodando em http://localhost:8080.
+Agora, o aplicativo estará rodando em http://localhost:8080/swagger-ui.html.
 
 ## Usando Docker Compose (Opcional)
 Se você preferir usar o Docker Compose, siga as etapas abaixo:
@@ -60,7 +60,8 @@ Execute o seguinte comando para iniciar o aplicativo:
 
 `docker-compose up`
 
-O aplicativo estará acessível em http://localhost:8080.
+O aplicativo estará acessível em http://localhost:8080 / http://localhost:8080/swagger-ui.html
+.
 
 3. **Parar os serviços**
 
