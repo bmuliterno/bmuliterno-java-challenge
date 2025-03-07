@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: VirtualStore
+  profiles:
+    active: dev
+
+logging:
+  level:
+    root: info
+    org.store.api: debug
