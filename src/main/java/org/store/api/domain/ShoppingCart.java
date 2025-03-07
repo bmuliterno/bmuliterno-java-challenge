@@ -21,4 +21,7 @@ public class ShoppingCart {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public void put(Long id, ShoppingCart shoppingCart) {
+    }
 }
