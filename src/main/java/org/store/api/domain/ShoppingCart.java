@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ShoppingCart {
     private Long id;
-    private List<Products> products;
+    private List<Products> products = new ArrayList<>();
     private Double totalValue;
 
     public ShoppingCart() {

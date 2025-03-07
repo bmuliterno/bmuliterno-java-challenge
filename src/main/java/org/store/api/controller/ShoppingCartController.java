@@ -4,6 +4,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.store.api.domain.Products;
 import org.store.api.domain.ShoppingCart;
+import org.store.api.service.CategoryService;
+import org.store.api.service.ProductsService;
 import org.store.api.service.ShoppingCartService;
 
 import java.util.List;
@@ -12,9 +14,13 @@ import java.util.List;
 @RequestMapping("/carrinho")
 public class ShoppingCartController {
     private final ShoppingCartService cartService;
+    private final ProductsService productsService;
+    private final CategoryService categoryService;
 
-    public ShoppingCartController(ShoppingCartService cartService) {
+    public ShoppingCartController(ShoppingCartService cartService, ProductsService productsService, CategoryService categoryService) {
         this.cartService = cartService;
+        this.productsService = productsService;
+        this.categoryService = categoryService;
     }
 
     @PostMapping
