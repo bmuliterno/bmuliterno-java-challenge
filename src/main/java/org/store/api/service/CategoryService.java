@@ -14,7 +14,7 @@ public class CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
-    public Category saveCategory(Category category) {
+        public Category saveCategory(Category category) {
         return categoryRepository.save(category);
     }
 
@@ -22,7 +22,12 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
-    public void removeCategory(Long id) {
-        categoryRepository.deleteById(id);
+    public Category findCategoryById(Long id) {
+        return categoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Categoria não encontrada com ID: " + id));
     }
+
+    public void removeCategory(Long id) {
+    categoryRepository.deleteById(id);
+}
 }

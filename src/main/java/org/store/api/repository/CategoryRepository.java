@@ -23,7 +23,11 @@ public class CategoryRepository {
         return new ArrayList<>(categories.values());
     }
 
-    public void deleteById(Long id) {
+    public Optional<Category> findById(Long id) {
+        return Optional.ofNullable(categories.get(id));
+    }
+
+        public void deleteById(Long id) {
         categories.remove(id);
     }
 }

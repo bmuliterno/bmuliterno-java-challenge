@@ -1,11 +1,23 @@
 package org.store.api.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
     private Long id;
     private String name;
-    private List<Products> products;
+    @JsonIgnore
+    private List<Products> products = new ArrayList<>();;
+
+    public Category() {}
+
+    public Category(Long id, String name) {
+        this.id = id;
+        this.name = name;
+        this.products = new ArrayList<>();
+    }
 
     public Long getId() {
         return id;

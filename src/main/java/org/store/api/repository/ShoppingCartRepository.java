@@ -13,19 +13,19 @@ public class ShoppingCartRepository {
         private final Map<Long, ShoppingCart> shoppingCart = new ConcurrentHashMap<>();
         private long nextId = 1;
 
-        public ShoppingCart save(ShoppingCart shoppingCart) {
-            if (shoppingCart.getId() == null) {
-                shoppingCart.setId(nextId++);
-            }
-            shoppingCart.put(shoppingCart.getId(), shoppingCart);
-            return shoppingCart;
+    public ShoppingCart save(ShoppingCart cart) {
+        if (cart.getId() == null) {
+            cart.setId(nextId++);
         }
-
-        public List<ShoppingCart> findAll() {
-            return new ArrayList<>(shoppingCart.values());
-        }
-
-        public void deleteById(Long id) {
-            shoppingCart.remove(id);
-        }
+        shoppingCart.put(cart.getId(), cart);
+        return cart;
     }
+
+    public List<ShoppingCart> findAll() {
+        return new ArrayList<>(shoppingCart.values());
+    }
+
+    public void deleteById(Long id) {
+        shoppingCart.remove(id);
+    }
+}
