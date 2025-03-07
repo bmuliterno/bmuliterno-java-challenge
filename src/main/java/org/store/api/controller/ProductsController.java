@@ -6,6 +6,7 @@ import org.store.api.domain.Products;
 import org.store.api.domain.Category;
 import org.store.api.service.CategoryService;
 import org.store.api.service.ProductsService;
+import org.store.api.service.ShoppingCartService;
 
 import java.util.List;
 
@@ -14,10 +15,12 @@ import java.util.List;
 public class ProductsController {
     private final ProductsService productsService;
     private final CategoryService categoryService;
+    private final ShoppingCartService cartService;
 
-    public ProductsController(ProductsService productsService, CategoryService categoryService) {
+    public ProductsController(ProductsService productsService, CategoryService categoryService, ShoppingCartService cartService) {
         this.productsService = productsService;
         this.categoryService = categoryService;
+        this.cartService = cartService;
     }
 
     @PostMapping
