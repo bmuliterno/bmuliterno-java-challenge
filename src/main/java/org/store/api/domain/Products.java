@@ -6,11 +6,13 @@ public class Products {
     private Double price;
     private Category category;
 
-    public Category getCategory() {
-        return category;
+    public Products() {
     }
 
-    public void setCategory(Category category) {
+    public Products(Long id, String name, Double price, Category category) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
         this.category = category;
     }
 
@@ -38,6 +40,12 @@ public class Products {
         this.price = price;
     }
 
-    public void put(Long id, Products products) {
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+
     }
 }
