@@ -37,4 +37,7 @@ public class Products {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    public void put(Long id, Products products) {
+    }
 }
