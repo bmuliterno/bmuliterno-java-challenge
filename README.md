@@ -68,6 +68,10 @@ Para parar os serviços em execução, utilize o comando:
 
 `docker-compose down`
 
+## Build
+
+`mvn clean install`
+
 ## Testando a API
 Você pode testar os endpoints usando ferramentas como:
 
